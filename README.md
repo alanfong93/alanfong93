@@ -14,11 +14,11 @@
 | Area | Tools |
 |---|---|
 | **Languages** | Python · PHP · JavaScript · PowerShell · Bash |
-| **Containers & Virtualization** | Docker · Docker Compose · Proxmox VE |
+| **Containers & Virtualization** | Docker · Docker Compose · Windows Hyper-V · Proxmox VE |
 | **Cloud** | AWS · Google Cloud Platform · Google Workspace (admin) |
 | **Automation / AI** | n8n · Claude Code · LLM agents · Whisper · Telegram Bot API |
-| **Networking** | OpenWRT · pfSense · multi-WAN · VPN (SoftEther, Twingate) |
-| **Infra / DevOps** | Traefik · CI/CD (GitHub Actions) · Uptime Kuma |
+| **Networking** | OpenWRT · pfSense · multi-WAN · VPN (SoftEther, Twingate) · Cloudflare Tunnel |
+| **Infra / DevOps** | Nginx · CI/CD (GitHub Actions) · Uptime Kuma |
 | **Storage / NAS** | Synology DSM · SHR / RAID · automated backups |
 | **Security** | YubiKey · Action1 patch management |
 
@@ -107,10 +107,10 @@ flowchart LR
         WAN[5x WAN lines] --> RTR[OpenWRT Router<br>multi-WAN failover]
     end
     subgraph Virt[Virtualization]
-        PVE[Proxmox VE] --> DOCK[Docker host]
+        PVE[Windows Hyper-V] --> DOCK[Docker host]
     end
     subgraph Svc[Self-Hosted Services]
-        DOCK --> RP[Traefik]
+        DOCK --> RP[Nginx]
         DOCK --> N8N[n8n]
         DOCK --> MON[Uptime Kuma]
     end
