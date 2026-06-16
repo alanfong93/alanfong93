@@ -29,7 +29,7 @@
 ### AI-Powered IT Support Bot
 An LLM-backed Telegram bot that automates first-line (L1) IT support end-to-end: tickets are checked against an FAQ/SOP/solutions knowledge base, the bot guides users through known fixes, and escalates only what needs a human — with common remediations (e.g. automated VM restarts) wired into the flow.
 
-> **Impact:** effectively replaced the L1 support tier — a departing L1 role did not need to be backfilled.
+> **Impact:** handles routine L1 tickets end-to-end, freeing the IT team to focus on higher-value engineering instead of repetitive support.
 
 ```mermaid
 flowchart TD
