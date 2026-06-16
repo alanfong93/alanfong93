@@ -18,7 +18,7 @@
 | **Cloud** | AWS · Google Cloud Platform · Google Workspace (admin) |
 | **Automation / AI** | n8n · Claude Code · LLM agents · Whisper · Telegram Bot API |
 | **Networking** | OpenWRT · pfSense · multi-WAN · VPN (SoftEther, Twingate) |
-| **Infra / DevOps** | Traefik · Ansible · CI/CD (GitHub Actions) · Uptime Kuma |
+| **Infra / DevOps** | Traefik · CI/CD (GitHub Actions) · Uptime Kuma |
 | **Storage / NAS** | Synology DSM · SHR / RAID · automated backups |
 | **Security** | YubiKey · Action1 patch management |
 
