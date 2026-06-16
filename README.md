@@ -1,6 +1,6 @@
 <h1 align="center">Hi, I'm Alan Fong 👋</h1>
 <p align="center"><b>DevOps &amp; Automation Engineer</b> · Johor Bahru, Malaysia</p>
-<p align="center">I build and run the systems that keep a business operating — then automate the parts that shouldn't need a human.</p>
+<p align="center">I build and run the systems that keep a business operating — integrating AI into workflows so people have more time to focus on high-quality work.</p>
 
 <p align="center">
   🌐 <a href="https://alanfong93.github.io">Portfolio site</a> ·
