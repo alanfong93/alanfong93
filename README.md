@@ -9,6 +9,28 @@
 
 ---
 
+## 🌐 Public project
+
+### Network Sandbox <sub>in progress</sub>
+A browser-only sandbox for **IEEE 802.1Q / 802.1D** bridging. Build a topology, send a frame, read the hop-by-hop trace — including why it died. No server, no account. A trace, never a verdict: it does not certify a production design or emulate any vendor's defaults.
+
+Wired core, access points as wired devices, and multi-WAN are in the engine; the browser editor is started. Radio coverage is not modelled.
+
+🌐 [Live demo](https://alanfong93.github.io/network-sandbox/) · 📦 [Source](https://github.com/alanfong93/network-sandbox)
+
+`TypeScript` · `IEEE 802.1Q` · `802.1D STP` · `Browser-only` · `GitHub Pages`
+
+```mermaid
+flowchart LR
+    UI[Browser UI<br>palette · canvas · inspector] --> ENG[802.1Q engine<br>ingress → forward → egress]
+    ENG --> TRACE[Hop trace<br>why it forwarded or died]
+    style UI fill:#cce5ff,color:#000
+    style ENG fill:#d4edda,color:#000
+    style TRACE fill:#fff3cd,color:#000
+```
+
+---
+
 ## 🧰 Tech Stack
 
 | Area | Tools |
@@ -193,4 +215,4 @@ A containerized **Whisper** (faster-whisper) transcription service running fully
 - **Docs-first** — architecture/flow docs and Mermaid diagrams in each repo
 - **Automation-first** — if a task is repetitive, it gets a pipeline
 
-<p align="center"><i>Most implementation code lives in private repos — this profile highlights architecture, decisions, and outcomes.</i></p>
+<p align="center"><i>Employer implementation lives in private repos. Public personal work is linked above.</i></p>
