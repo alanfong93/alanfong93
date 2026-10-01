@@ -11,8 +11,6 @@
 
 ## 🌐 Public Projects
 
-*Project status checked against GitHub on 1 October 2026.*
-
 ### ops-guard <sub>in progress · runnable MCP service</sub>
 A single-operator **MCP server** for cited runbook guidance, controlled execution, and durable audit records. The LAN HTTPS service exposes runbook search and audited proposal creation. The execution gate checks evidence, preconditions, and authorization inside the server; permitted and refused execution paths are demonstrated over the real components. Optional Telegram approval binds a human decision to a specific proposal.
 
