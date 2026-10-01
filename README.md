@@ -18,21 +18,21 @@ A single-operator **MCP server** for cited runbook guidance, controlled executio
 
 Execution is not yet exposed as an MCP tool. Local risk judgments are audit-only, never authorization; the current rubric failed its usefulness evaluation.
 
-📦 [Source and evidence](https://github.com/alanfong93/ops-guard)
+📦 [GitHub Repo](https://github.com/alanfong93/ops-guard)
 
 `Python` · `FastMCP` · `SQLite` · `TLS` · `Approval gates` · `Audit logging`
 
 ### local-judge <sub>implemented · live-model usefulness not yet established</sub>
 A structured decision engine for **choice, score, and Noul questions**, implementing a documented Jev-compatible subset. One core serves a Python library, HTTP API, and MCP interface, with Ollama and OpenAI-compatible model adapters. Validates model output in code, reports typed failures, and separates repeated-sample agreement from calibrated confidence. Includes container deployment and scripted evidence-runner tests.
 
-📦 [Source](https://github.com/alanfong93/local-judge)
+📦 [GitHub Repo](https://github.com/alanfong93/local-judge)
 
 `Python` · `Ollama` · `HTTP API` · `MCP` · `Docker` · `Structured judgments`
 
 ### jiandu — Source-Backed AI Context
 A public starter kit from *The Context You Already Earned* meetup talk: preserve original sources, compile cited wiki notes, and index pointers with MemPalace. Includes an empty vault, compile/index skills, and a pointer-index script for Markdown and captions. Supports Claude Code, Codex, and OpenCode; indexing is explicitly run after writes.
 
-📦 [Starter kit](https://github.com/alanfong93/jiandu)
+📦 [GitHub Repo](https://github.com/alanfong93/jiandu)
 
 `Python` · `Markdown` · `Obsidian` · `MemPalace` · `Agent skills`
 
@@ -41,7 +41,7 @@ A browser-only sandbox for **IEEE 802.1Q / 802.1D** bridging. Build a topology, 
 
 Wired core, access points as wired devices, and multi-WAN are in the engine. The browser editor includes a device palette, inspector, SVG canvas, port-click cabling, hop replay, and starter topologies. Save/import topology JSON or export a share copy with ISP credentials stripped. Optional AI review is labelled advice beside the engine. Radio coverage is not modelled.
 
-🌐 [Live demo](https://alanfong93.github.io/network-sandbox/) · 📦 [Source](https://github.com/alanfong93/network-sandbox)
+🌐 [Live demo](https://alanfong93.github.io/network-sandbox/) · 📦 [GitHub Repo](https://github.com/alanfong93/network-sandbox)
 
 `TypeScript` · `IEEE 802.1Q` · `802.1D STP` · `Browser-only` · `GitHub Pages`
 
