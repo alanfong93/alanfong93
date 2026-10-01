@@ -11,6 +11,24 @@
 
 ## 🌐 Public Projects
 
+### Network Sandbox <sub>in progress</sub>
+A browser-only sandbox for **IEEE 802.1Q / 802.1D** bridging. Build a topology, send a frame, read the hop-by-hop trace — including why it died. No server, no account. A trace, never a verdict: it does not certify a production design or emulate any vendor's defaults.
+
+Wired core, access points as wired devices, and multi-WAN are in the engine. The browser editor includes a device palette, inspector, SVG canvas, port-click cabling, hop replay, and starter topologies. Save/import topology JSON or export a share copy with ISP credentials stripped. Optional AI review is labelled advice beside the engine. Radio coverage is not modelled.
+
+🌐 [Live demo](https://alanfong93.github.io/network-sandbox/) · 📦 [GitHub Repo](https://github.com/alanfong93/network-sandbox)
+
+`TypeScript` · `IEEE 802.1Q` · `802.1D STP` · `Browser-only` · `GitHub Pages`
+
+```mermaid
+flowchart LR
+    UI[Browser UI<br>palette · canvas · inspector] --> ENG[802.1Q engine<br>ingress → forward → egress]
+    ENG --> TRACE[Hop trace<br>why it forwarded or died]
+    style UI fill:#cce5ff,color:#000
+    style ENG fill:#d4edda,color:#000
+    style TRACE fill:#fff3cd,color:#000
+```
+
 ### ops-guard <sub>in progress · runnable MCP service</sub>
 A single-operator **MCP server** for cited runbook guidance, controlled execution, and durable audit records. The LAN HTTPS service exposes runbook search and audited proposal creation. The execution gate checks evidence, preconditions, and authorization inside the server; permitted and refused execution paths are demonstrated over the real components. Optional Telegram approval binds a human decision to a specific proposal.
 
@@ -33,24 +51,6 @@ A public starter kit from *The Context You Already Earned* meetup talk: preserve
 📦 [GitHub Repo](https://github.com/alanfong93/jiandu)
 
 `Python` · `Markdown` · `Obsidian` · `MemPalace` · `Agent skills`
-
-### Network Sandbox <sub>in progress</sub>
-A browser-only sandbox for **IEEE 802.1Q / 802.1D** bridging. Build a topology, send a frame, read the hop-by-hop trace — including why it died. No server, no account. A trace, never a verdict: it does not certify a production design or emulate any vendor's defaults.
-
-Wired core, access points as wired devices, and multi-WAN are in the engine. The browser editor includes a device palette, inspector, SVG canvas, port-click cabling, hop replay, and starter topologies. Save/import topology JSON or export a share copy with ISP credentials stripped. Optional AI review is labelled advice beside the engine. Radio coverage is not modelled.
-
-🌐 [Live demo](https://alanfong93.github.io/network-sandbox/) · 📦 [GitHub Repo](https://github.com/alanfong93/network-sandbox)
-
-`TypeScript` · `IEEE 802.1Q` · `802.1D STP` · `Browser-only` · `GitHub Pages`
-
-```mermaid
-flowchart LR
-    UI[Browser UI<br>palette · canvas · inspector] --> ENG[802.1Q engine<br>ingress → forward → egress]
-    ENG --> TRACE[Hop trace<br>why it forwarded or died]
-    style UI fill:#cce5ff,color:#000
-    style ENG fill:#d4edda,color:#000
-    style TRACE fill:#fff3cd,color:#000
-```
 
 ---
 
@@ -232,7 +232,7 @@ A containerized **Whisper** (faster-whisper) transcription service running fully
 
 ## 🎓 Education & Certifications
 
-- **Bachelor's Degree, Information Technology (Software Engineering)** — Southern University College · *2014–2018*
+- **Bachelor of Software Engineering (Hons)** — Southern University College · *2014–2018*
 - **Google IT Support Professional Certificate** — *2024*
 
 ---
