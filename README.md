@@ -9,12 +9,37 @@
 
 ---
 
-## 🌐 Public project
+## 🌐 Public Projects
+
+*Project status checked against GitHub on 1 October 2026.*
+
+### ops-guard <sub>in progress · runnable MCP service</sub>
+A single-operator **MCP server** for cited runbook guidance, controlled execution, and durable audit records. The LAN HTTPS service exposes runbook search and audited proposal creation. The execution gate checks evidence, preconditions, and authorization inside the server; permitted and refused execution paths are demonstrated over the real components. Optional Telegram approval binds a human decision to a specific proposal.
+
+Execution is not yet exposed as an MCP tool. Local risk judgments are audit-only, never authorization; the current rubric failed its usefulness evaluation.
+
+📦 [Source and evidence](https://github.com/alanfong93/ops-guard)
+
+`Python` · `FastMCP` · `SQLite` · `TLS` · `Approval gates` · `Audit logging`
+
+### local-judge <sub>implemented · live-model usefulness not yet established</sub>
+A structured decision engine for **choice, score, and Noul questions**, implementing a documented Jev-compatible subset. One core serves a Python library, HTTP API, and MCP interface, with Ollama and OpenAI-compatible model adapters. Validates model output in code, reports typed failures, and separates repeated-sample agreement from calibrated confidence. Includes container deployment and scripted evidence-runner tests.
+
+📦 [Source](https://github.com/alanfong93/local-judge)
+
+`Python` · `Ollama` · `HTTP API` · `MCP` · `Docker` · `Structured judgments`
+
+### jiandu — Source-Backed AI Context
+A public starter kit from *The Context You Already Earned* meetup talk: preserve original sources, compile cited wiki notes, and index pointers with MemPalace. Includes an empty vault, compile/index skills, and a pointer-index script for Markdown and captions. Supports Claude Code, Codex, and OpenCode; indexing is explicitly run after writes.
+
+📦 [Starter kit](https://github.com/alanfong93/jiandu)
+
+`Python` · `Markdown` · `Obsidian` · `MemPalace` · `Agent skills`
 
 ### Network Sandbox <sub>in progress</sub>
 A browser-only sandbox for **IEEE 802.1Q / 802.1D** bridging. Build a topology, send a frame, read the hop-by-hop trace — including why it died. No server, no account. A trace, never a verdict: it does not certify a production design or emulate any vendor's defaults.
 
-Wired core, access points as wired devices, and multi-WAN are in the engine; the browser editor is started. Radio coverage is not modelled.
+Wired core, access points as wired devices, and multi-WAN are in the engine. The browser editor includes a device palette, inspector, SVG canvas, port-click cabling, hop replay, and starter topologies. Save/import topology JSON or export a share copy with ISP credentials stripped. Optional AI review is labelled advice beside the engine. Radio coverage is not modelled.
 
 🌐 [Live demo](https://alanfong93.github.io/network-sandbox/) · 📦 [Source](https://github.com/alanfong93/network-sandbox)
 
@@ -35,10 +60,10 @@ flowchart LR
 
 | Area | Tools |
 |---|---|
-| **Languages** | Python · PHP · JavaScript · PowerShell · Bash |
+| **Languages** | Python · C# · PHP · JavaScript · TypeScript · PowerShell · Bash |
 | **Containers & Virtualization** | Docker · Docker Compose · Windows Hyper-V · Proxmox VE |
 | **Cloud** | AWS · Google Cloud Platform · Google Workspace (admin) |
-| **Automation / AI** | n8n · Claude Code · LLM agents · Whisper · Telegram Bot API |
+| **Automation / AI** | n8n · OpenCode · MCP · Ollama · LLM agents · Whisper · Telegram Bot API |
 | **Networking** | OpenWRT · pfSense · multi-WAN · VPN (SoftEther, Twingate) · Cloudflare Tunnel |
 | **Infra / DevOps** | Nginx · CI/CD (GitHub Actions) · Uptime Kuma |
 | **Storage / NAS** | Synology DSM · SHR / RAID · automated backups |
@@ -47,6 +72,8 @@ flowchart LR
 ---
 
 ## 🚀 Featured Work
+
+*Employer projects are described at a high level; their implementation remains private.*
 
 ### Distributed Print-Fleet Service
 A self-hosted platform that turns USB thermal printers into a managed, multi-site network resource. **Raspberry Pi edge agents** expose printers over an authenticated HTTP API with idempotent, reboot-safe job queues; a **central control plane** handles terminal enrollment, token-scoped auth, dispatch, webhook callbacks, and over-the-air fleet updates — with a web dashboard and hardened systemd deployment.
@@ -153,11 +180,11 @@ flowchart LR
 ## 🤖 AI Projects
 
 ### JoJo — Personal AI Assistant
-An agentic assistant built on **Claude Code**, reachable over Telegram. It manages calendar, email, notes and files, runs automations through n8n, drives a browser for research, and keeps **persistent cross-session memory** via custom MCP (Model Context Protocol) servers.
+An agentic assistant running in **OpenCode**. It manages calendar, email, notes and files, runs automations through n8n, drives a browser for research, and keeps **persistent cross-session memory** through MemPalace and an Obsidian vault. MCP (Model Context Protocol) connects the agent to external tools; vault indexing is an explicit workflow.
 
 ```mermaid
 flowchart LR
-    TG[Telegram] <--> AGENT[Claude Code agent]
+    USER[Operator] <--> AGENT[OpenCode agent]
     AGENT --> MCP[MCP tools<br>memory / browser / search]
     AGENT --> N8N[n8n workflows]
     N8N --> SVC[Calendar / Email<br>Drive / News]
@@ -185,7 +212,9 @@ A containerized **Whisper** (faster-whisper) transcription service running fully
 
 ---
 
-## 🛠 Selected Open-Source Projects
+## 🛠 Selected Private Utilities
+
+*These repositories are private; descriptions show the work without exposing the source.*
 
 | Project | What it is | Stack |
 |---|---|---|
@@ -211,7 +240,7 @@ A containerized **Whisper** (faster-whisper) transcription service running fully
 ---
 
 ## 🧭 How I Work
-- **Conventional Commits** + **branch-based PRs** with CI-based automated code review
+- **Conventional Commits** + **branch-based PRs** with maintainer-style and adversarial AI review
 - **Docs-first** — architecture/flow docs and Mermaid diagrams in each repo
 - **Automation-first** — if a task is repetitive, it gets a pipeline
 
