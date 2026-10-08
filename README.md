@@ -11,7 +11,7 @@
 
 ## 🌐 Public Projects
 
-### Network Sandbox <sub>in progress</sub>
+### Network Sandbox
 A browser-only sandbox for **IEEE 802.1Q / 802.1D** bridging. Build a topology, send a frame, read the hop-by-hop trace — including why it died. No server, no account. A trace, never a verdict: it does not certify a production design or emulate any vendor's defaults.
 
 Wired core, access points as wired devices, and multi-WAN are in the engine. The browser editor includes a device palette, inspector, SVG canvas, port-click cabling, hop replay, and starter topologies. Save/import topology JSON or export a share copy with ISP credentials stripped. Optional AI review is labelled advice beside the engine. Radio coverage is not modelled.
@@ -29,10 +29,10 @@ flowchart LR
     style TRACE fill:#fff3cd,color:#000
 ```
 
-### ops-guard <sub>in progress · runnable MCP service</sub>
+### ops-guard
 A single-operator **MCP server** for cited runbook guidance, controlled execution, and durable audit records. The LAN HTTPS service exposes runbook search and audited proposal creation. The execution gate checks evidence, preconditions, and authorization inside the server; permitted and refused execution paths are demonstrated over the real components. Optional Telegram approval binds a human decision to a specific proposal.
 
-Execution is not yet exposed as an MCP tool. Local risk judgments are audit-only, never authorization; the current rubric failed its usefulness evaluation.
+The execution MCP tool is enabled when an operator-owned execution catalog and policy configure its gate. Local risk judgments remain audit-only and never authorize execution; representative usefulness has not passed the evaluation gates.
 
 📦 [GitHub Repo](https://github.com/alanfong93/ops-guard)
 
@@ -72,6 +72,16 @@ A public starter kit from *The Context You Already Earned* meetup talk: preserve
 ## 🚀 Featured Work
 
 *Employer projects are described at a high level; their implementation remains private.*
+
+### MZM Project Board
+Creator and primary author of a **Python/Docker engineering-status dashboard**. Read-only GitHub REST/GraphQL collection combines issue/PR states with backend/UI module views, blockers, and approval/review queues. Incremental polling respects API budgets; refresh locking, persisted snapshots, and atomic page publication protect the last successful view.
+
+`Python` · `Docker` · `GitHub APIs` · `Incremental polling` · `Workflow visibility`
+
+### IT Asset-Management Service
+Sole author of a **.NET 10 service** for serialized asset assignments and consumable stock. Clean Architecture/CQRS use cases sit over EF Core/PostgreSQL, with permission-checked endpoints, ledger mutation enforcement, and bounded bulk-import work.
+
+`C# / .NET 10` · `ASP.NET Core` · `CQRS` · `EF Core` · `PostgreSQL`
 
 ### Distributed Print-Fleet Service
 A self-hosted platform that turns USB thermal printers into a managed, multi-site network resource. **Raspberry Pi edge agents** expose printers over an authenticated HTTP API with idempotent, reboot-safe job queues; a **central control plane** handles terminal enrollment, token-scoped auth, dispatch, webhook callbacks, and over-the-air fleet updates — with a web dashboard and hardened systemd deployment.
@@ -145,13 +155,13 @@ flowchart TD
     style G fill:#cce5ff,color:#000
 ```
 
-### Self-Hosted IT Infrastructure (built from scratch)
-As the first IT hire at an SME, I designed and built the entire IT function from zero — network edge, virtualization, self-hosted services, central storage, backups, and security. File storage runs on a **Synology DS920+ (SHR)**, replicated to a dedicated Synology backup target.
+### Self-Hosted IT Infrastructure
+Established the IT function as the first IT hire, building and operating virtualization, self-hosted services, storage, backups, and security tooling while maintaining the business network. Synology storage uses redundancy and replication to a separate backup target.
 
 ```mermaid
 flowchart LR
     subgraph Edge[Network Edge]
-        WAN[5x WAN lines] --> RTR[OpenWRT Router<br>multi-WAN failover]
+        WAN[Multiple WAN lines] --> RTR[OpenWRT Router<br>multi-WAN failover]
     end
     subgraph Virt[Virtualization]
         PVE[Windows Hyper-V] --> DOCK[Docker host]
@@ -162,7 +172,7 @@ flowchart LR
         DOCK --> MON[Uptime Kuma]
     end
     subgraph Store[Storage]
-        NAS[Synology DS920+<br>SHR] --> BAK[DS120<br>backup target]
+        NAS[Synology NAS<br>redundant storage] --> BAK[Separate NAS<br>backup target]
     end
     RTR --> PVE
     PVE --> NAS
@@ -175,10 +185,12 @@ flowchart LR
 
 ---
 
-## 🤖 AI Projects
+## 🧩 Private Personal Projects
 
 ### JoJo — Personal AI Assistant
 An agentic assistant running in **OpenCode**. It manages calendar, email, notes and files, runs automations through n8n, drives a browser for research, and keeps **persistent cross-session memory** through MemPalace and an Obsidian vault. MCP (Model Context Protocol) connects the agent to external tools; vault indexing is an explicit workflow.
+
+Built a companion **Microsoft Agent Framework staff-house runtime** with typed specialist dispatch, durable channel admission and checkpoints, scope-bound human approval, effect journals, and operator controls. It extends the assistant infrastructure without treating model output as authorization.
 
 ```mermaid
 flowchart LR
@@ -187,14 +199,27 @@ flowchart LR
     AGENT --> N8N[n8n workflows]
     N8N --> SVC[Calendar / Email<br>Drive / News]
     AGENT --> MEM[(Persistent memory)]
+    CHANNELS[Channel adapters] --> HOUSE[MAF staff-house runtime]
+    HOUSE --> MEM
+    HOUSE --> POLICY[Approval and effect boundary]
     style AGENT fill:#cce5ff,color:#000
     style MEM fill:#d4edda,color:#000
     style N8N fill:#d4edda,color:#000
+    style HOUSE fill:#cce5ff,color:#000
+    style POLICY fill:#d4edda,color:#000
 ```
 
-### Hermes — Self-Hosted Speech-to-Text
-A containerized **Whisper** (faster-whisper) transcription service running fully local with zero per-call API cost — powering voice-message transcription inside automation pipelines.
-`Whisper` · `Docker` · `Python`
+### Mobility World
+A private local prototype for **real-world transit planning and streetscape exploration**, starting with Johor Bahru. Built r5py/R5 before/after comparisons over pinned OSM/GTFS data, synthetic routes, and an assumption-aware line editor. A Three.js/Rapier browser scene supports walking, driving, and motorcycle modes.
+
+Cost ranges and input provenance make assumptions explicit. Routing/driving are modelled, not observed traffic or calibrated congestion; hardware-performance acceptance remains outstanding.
+
+`Python` · `r5py / R5` · `OSM / GTFS` · `Three.js` · `Rapier` · `JavaScript`
+
+### AI Eyes — Vision Assistant
+A private **FastAPI camera-to-AI prototype** for identifying objects, how-to guidance, and translating visible text. Gemini Flash 3 returns structured overlay data to a web HUD, keeping display code separate from model integration.
+
+`Python` · `FastAPI` · `JavaScript` · `Gemini Flash 3`
 
 ---
 
@@ -221,6 +246,7 @@ A containerized **Whisper** (faster-whisper) transcription service running fully
 | **database-sensei** | Multi-driver database tool (SQLAlchemy 2.0+) with a full-stack UI | Python |
 | **WindowsOptimizationsScript** | Windows debloat/optimization — registry & VM tuning | PowerShell |
 | **screenRuler** | On-screen measurement utility, cross-implemented in two languages | Python · C# |
+| **Hermes** | Self-hosted faster-whisper transcription for automation pipelines | Python · Docker · Whisper |
 
 ---
 
